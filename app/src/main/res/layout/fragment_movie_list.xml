@@ -1,0 +1,101 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.cinergy.presentation.movieList.MovieListViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_32"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onBackClicked()}"
+            android:paddingStart="@dimen/mg_pd_8"
+            android:paddingTop="@dimen/mg_pd_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_back_arrow_24"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:onClick="@{() -> viewModel.onBackClicked()}"
+            android:paddingTop="@dimen/mg_pd_16"
+            android:text="@string/back_action"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_20"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_back"
+            app:layout_constraintStart_toEndOf="@id/ic_back"
+            app:layout_constraintTop_toTopOf="@id/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            app:layout_constraintBottom_toBottomOf="@id/tv_current_location"
+            app:layout_constraintEnd_toStartOf="@id/tv_current_location"
+            app:layout_constraintTop_toTopOf="@id/tv_current_location"
+            app:srcCompat="@drawable/ic_location_pin_24"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_current_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:layout_marginEnd="@dimen/mg_pd_8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/current_location_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/ic_back" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_escape_room"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_8"
+            android:layout_marginTop="@dimen/mg_pd_20"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/escape_room_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_24"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_back" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_movie_list"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/mg_pd_8"
+            android:layout_marginEnd="@dimen/mg_pd_8"
+            android:paddingBottom="@dimen/mg_pd_52"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_escape_room" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

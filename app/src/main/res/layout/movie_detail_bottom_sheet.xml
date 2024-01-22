@@ -1,0 +1,196 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.cinergy.presentation.movieDetailBottomSheet.MovieDetailViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:background="@drawable/bg_circle_dark"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onCloseClick()}"
+            android:padding="@dimen/mg_pd_4"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_close_24" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_movie_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="@dimen/mg_pd_8"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:layout_marginEnd="@dimen/mg_pd_8"
+            app:layout_constraintBottom_toTopOf="@id/btn_book_now"
+            app:layout_constraintEnd_toStartOf="@id/guidelineLeft"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_back" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.40" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/guidelineLeft"
+            app:layout_constraintTop_toTopOf="@id/img_movie_image"
+            tools:text="Escape Room - Bunker 57" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_calender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_8"
+            app:layout_constraintStart_toStartOf="@id/tv_movie_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            app:srcCompat="@drawable/ic_calender_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_time_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_8"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/dark_300"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_calender"
+            app:layout_constraintStart_toEndOf="@id/ic_calender"
+            app:layout_constraintTop_toTopOf="@id/ic_calender"
+            tools:text="60 mins" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_person"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_8"
+            android:layout_marginTop="@dimen/mg_pd_8"
+            app:layout_constraintStart_toEndOf="@id/tv_time_duration"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_title"
+            app:srcCompat="@drawable/ic_person_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_person"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_8"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/dark_300"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/ic_person"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_person"
+            app:layout_constraintTop_toTopOf="@id/ic_person"
+            tools:text="Up to 8 members" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_sub_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/dark_300"
+            android:textSize="@dimen/sz_typo_font_size_16"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ic_calender"
+            app:layout_constraintTop_toBottomOf="@id/ic_calender"
+            tools:text="LOS ANGELES, CA. The year is 2039" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_movie_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:textColor="@color/dark_300"
+            android:textSize="@dimen/sz_typo_font_size_16"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_movie_sub_title"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_sub_title"
+            tools:text="LOS ANGELES, CA. The year is 2039" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_book_now"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/mg_pd_8"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:background="@drawable/bg_corner_radius_4_light_green"
+            android:onClick="@{() -> viewModel.onBookNowClicked()}"
+            android:paddingHorizontal="@dimen/mg_pd_82"
+            android:text="@string/book_now_action"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tv_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_movie_description"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.6" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_info"
+            android:layout_width="@dimen/mg_pd_24"
+            android:layout_height="@dimen/mg_pd_24"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onInfoClick()}"
+            app:layout_constraintBottom_toTopOf="@id/tv_info"
+            app:layout_constraintEnd_toEndOf="@id/tv_info"
+            app:layout_constraintStart_toStartOf="@id/tv_info"
+            app:srcCompat="@drawable/ic_info" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/mg_pd_16"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onInfoClick()}"
+            android:paddingBottom="0dp"
+            android:text="@string/more_action"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_16"
+            app:layout_constraintBottom_toBottomOf="@id/btn_book_now"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_book_now"
+            app:layout_constraintWidth_default="percent"
+            app:layout_constraintWidth_percent="0.4" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

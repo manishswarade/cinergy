@@ -1,0 +1,214 @@
+<layout>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.cinergy.presentation.welcome.WelcomeViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_cinergy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:layout_marginVertical="@dimen/mg_pd_32"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/img_cinergy" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_join_the_magic_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/join_the_magic_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_20"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/img_cinergy" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_be_cinergy_elite_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/be_cinergy_elite_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_24"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_join_the_magic_label" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_enjoy_free_popcorn_on_sign_up_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_24"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_be_cinergy_elite_label"
+            app:srcCompat="@drawable/ic_fill_star_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_enjoy_free_popcorn_on_sign_up_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/enjoy_free_popcorn_on_sign_up_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/ic_enjoy_free_popcorn_on_sign_up_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_enjoy_free_popcorn_on_sign_up_label"
+            app:layout_constraintTop_toTopOf="@id/ic_enjoy_free_popcorn_on_sign_up_label" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_enjoy_5_elite_reward_after_300_points_to_spend_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_enjoy_free_popcorn_on_sign_up_label"
+            app:srcCompat="@drawable/ic_fill_star_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_enjoy_5_elite_reward_after_300_points_to_spend_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/enjoy_5_elite_reward_after_300_points_to_spend_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/ic_enjoy_5_elite_reward_after_300_points_to_spend_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_enjoy_5_elite_reward_after_300_points_to_spend_label"
+            app:layout_constraintTop_toTopOf="@id/ic_enjoy_5_elite_reward_after_300_points_to_spend_label" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_enjoy_special_birthday_movie_ticket_offer_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_enjoy_5_elite_reward_after_300_points_to_spend_label"
+            app:srcCompat="@drawable/ic_fill_star_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_enjoy_special_birthday_movie_ticket_offer_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/enjoy_special_birthday_movie_ticket_offer_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/ic_enjoy_special_birthday_movie_ticket_offer_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_enjoy_special_birthday_movie_ticket_offer_label"
+            app:layout_constraintTop_toTopOf="@id/ic_enjoy_special_birthday_movie_ticket_offer_label" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ic_enjoy_exclusive_content_sneaks_peaks_special_offers_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_enjoy_special_birthday_movie_ticket_offer_label"
+            app:srcCompat="@drawable/ic_fill_star_24" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_enjoy_exclusive_content_sneaks_peaks_special_offers_label"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/enjoy_exclusive_content_sneaks_peaks_special_offers_label"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sz_typo_font_size_14"
+            app:layout_constraintBottom_toBottomOf="@id/ic_enjoy_exclusive_content_sneaks_peaks_special_offers_label"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/ic_enjoy_exclusive_content_sneaks_peaks_special_offers_label"
+            app:layout_constraintTop_toTopOf="@id/ic_enjoy_exclusive_content_sneaks_peaks_special_offers_label" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_in_now"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_32"
+            android:background="@drawable/bg_corner_radius_4_light_green"
+            android:paddingHorizontal="@dimen/mg_pd_68"
+            android:text="@string/sign_in_now_action"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ic_enjoy_exclusive_content_sneaks_peaks_special_offers_label" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_do_not_have_account"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/mg_pd_16"
+            android:layout_marginTop="@dimen/mg_pd_24"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/do_not_have_account_action"
+            android:textAlignment="center"
+            android:textColor="@color/dark"
+            android:textSize="@dimen/sz_typo_font_size_12"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_in_now" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_8"
+            android:background="@drawable/bg_corner_radius_4_light_green"
+            android:paddingHorizontal="@dimen/mg_pd_82"
+            android:text="@string/sign_up_action"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_do_not_have_account" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_continue_as_guest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/mg_pd_16"
+            android:background="@drawable/bg_corner_radius_4_light_green"
+            android:onClick="@{()->viewModel.onContinueAsGuestClick()}"
+            android:paddingHorizontal="@dimen/mg_pd_48"
+            android:text="@string/continue_as_guest_action"
+            android:textAllCaps="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_sign_up" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
